@@ -72,6 +72,45 @@ Resources:
 Maintainer: [Guy Duryee]
 
 
+---
+
+## 🐳 WordPress Environment (Docker)
+
+A `docker-compose.yml` is included to spin up a local WordPress environment with MySQL and phpMyAdmin.
+
+### Services
+
+| Service      | Default URL                  | Description                       |
+|--------------|------------------------------|-----------------------------------|
+| WordPress    | http://localhost:8080        | WordPress site                    |
+| phpMyAdmin   | http://localhost:8081        | Database management UI            |
+
+### Quick Start
+
+1. Copy the example environment file and edit it as needed:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Start all services:
+   ```bash
+   docker compose up -d
+   ```
+
+3. Open http://localhost:8080 in your browser and complete the WordPress installation wizard.
+
+4. To stop and remove containers (data volumes are preserved):
+   ```bash
+   docker compose down
+   ```
+
+5. To also remove all persisted data:
+   ```bash
+   docker compose down -v
+   ```
+
+---
+
 ## 🤝 Feedback & Enhancements
 For support, bug notification, or post idea for enhancement, please post in [discussions](https://github.com/gduryee/Situations_Resolutions/discussions/). 
 
