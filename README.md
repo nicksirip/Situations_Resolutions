@@ -32,16 +32,57 @@ An interactive, mobile-responsive web application designed to help USA Swimming 
 
 ## 📂 Project Structure
 
-* `Situations-app_web.py`: The core Streamlit application logic.
+* `Situations-app_web.py`: The core Streamlit application logic (original Python app).
 * `Situations-n-Resolutions-with-sections.xlsx`: The data source containing the situations, resolutions, and rules.
-* `requirements.txt`: List of Python dependencies for cloud deployment.
-* `assets/`: Contains the USA Swimming and PNS logos.
+* `requirements.txt`: List of Python dependencies for Streamlit cloud deployment.
+* `situations-resolutions/`: **WordPress plugin** (see below).
+* `tools/export_json.py`: Helper script to re-export the Excel data to the plugin's JSON file.
 
 ---
 
-## 🛠️ Installation (Local Development)
+## 🌐 WordPress Plugin
 
-If you wish to run this app locally:
+A self-contained WordPress plugin is included in the `situations-resolutions/` folder. It replicates all features of the Streamlit app and runs **entirely in the browser using vanilla JavaScript** — no Python server, no Streamlit, and no paid plugins are required.
+
+### ✨ Plugin Features
+
+All four study modes are supported:
+* **Sequential Review** – step through situations per stroke/topic with +/− navigation.
+* **Random Shuffle** – randomised pick from all strokes or a single stroke.
+* **Keyword Search** – search situations and/or resolutions with yellow highlighting.
+* **Search by Number** – jump directly to any situation by number.
+
+Plus: Hide Resolution checkbox (self-test mode), adjustable font size slider, and mobile-responsive layout.
+
+### 🚀 Installation
+
+1. Download or clone this repository.
+2. Zip the `situations-resolutions/` folder.
+3. In your WordPress admin go to **Plugins → Add New Plugin → Upload Plugin**.
+4. Upload the zip and click **Activate**.
+5. Add the shortcode `[situations_resolutions]` to any Page or Post.
+
+#### Manual upload
+
+Upload the `situations-resolutions/` folder to `/wp-content/plugins/` via FTP, then activate it from the Plugins screen.
+
+### 🔄 Updating the Data
+
+When USA Swimming publishes a new Situations & Resolutions document:
+
+1. Update `Situations-n-Resolutions-with-sections.xlsx` in the repository root.
+2. Run the export helper (requires Python 3 + pandas + openpyxl):
+   ```bash
+   python3 tools/export_json.py
+   ```
+3. Replace `situations-resolutions/assets/data/situations.json` with the newly generated file.
+4. Re-upload the updated plugin to WordPress.
+
+---
+
+## 🛠️ Streamlit App – Local Development
+
+If you wish to run the original Python/Streamlit app locally:
 
 1. Clone the repository:
 ``` bash

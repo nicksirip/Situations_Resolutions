@@ -1,0 +1,324 @@
+/* =============================================================
+   USA Swimming Officials – Situations & Resolutions
+   WordPress Plugin Stylesheet
+   ============================================================= */
+
+#sr-app {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 12px 12px 32px;
+    box-sizing: border-box;
+    color: #1a1a1a;
+}
+
+/* ── Header ── */
+.sr-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 8px 0 12px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 16px;
+}
+.sr-header img {
+    height: 60px;
+    width: auto;
+}
+.sr-header-titles {
+    text-align: center;
+}
+.sr-header-titles h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.sr-header-titles h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+.sr-header-titles p {
+    margin: 2px 0 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ── Toolbar (mode tabs + options) ── */
+.sr-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.sr-mode-tabs {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.sr-mode-tab {
+    padding: 6px 14px;
+    border: 1px solid #1565c0;
+    border-radius: 20px;
+    background: #fff;
+    color: #1565c0;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+.sr-mode-tab:hover {
+    background: #e3f0fb;
+}
+.sr-mode-tab.active {
+    background: #1565c0;
+    color: #fff;
+}
+
+/* ── Options row ── */
+.sr-options {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.sr-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+.sr-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.sr-font-size-control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.sr-font-size-control input[type="range"] {
+    width: 110px;
+    cursor: pointer;
+}
+
+/* ── Segmented stroke filter ── */
+.sr-stroke-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+.sr-stroke-btn {
+    padding: 5px 13px;
+    border: 1px solid #888;
+    border-radius: 16px;
+    background: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+}
+.sr-stroke-btn:hover {
+    border-color: #1565c0;
+    color: #1565c0;
+}
+.sr-stroke-btn.active {
+    background: #1565c0;
+    color: #fff;
+    border-color: #1565c0;
+}
+
+/* ── Sequential nav ── */
+.sr-seq-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.sr-seq-nav input[type="number"] {
+    width: 70px;
+    padding: 6px 8px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.sr-seq-nav .sr-btn {
+    padding: 6px 16px;
+    font-size: 0.95rem;
+}
+.sr-seq-total {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ── Buttons ── */
+.sr-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: opacity 0.15s;
+}
+.sr-btn:hover { opacity: 0.85; }
+.sr-btn-primary {
+    background: #1565c0;
+    color: #fff;
+}
+.sr-btn-secondary {
+    background: #e9ecef;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+/* ── Search inputs ── */
+.sr-search-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.sr-search-row input[type="text"],
+.sr-search-row select {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.sr-search-results select {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+}
+
+/* ── Card ── */
+.sr-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 14px;
+    background: #fafafa;
+}
+.sr-card-meta {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 8px;
+}
+.sr-card-situation {
+    background: #e3f2fd;
+    border-left: 4px solid #1565c0;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+.sr-card-resolution {
+    background: #e8f5e9;
+    border-left: 4px solid #2e7d32;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.sr-card-rule {
+    background: #fff8e1;
+    border-left: 4px solid #f9a825;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.sr-card-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+/* ── Highlights ── */
+mark.sr-highlight {
+    background-color: #ffff00;
+    color: #000;
+    font-weight: bold;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+/* ── Notices ── */
+.sr-notice {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.sr-notice-info    { background: #e3f2fd; color: #0d47a1; }
+.sr-notice-success { background: #e8f5e9; color: #1b5e20; }
+.sr-notice-warning { background: #fff8e1; color: #5d4037; }
+
+/* ── Footer ── */
+.sr-footer {
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+.sr-footer a { color: #888; }
+.sr-footer img {
+    height: 40px;
+    width: auto;
+    margin-bottom: 6px;
+}
+
+/* ── Divider ── */
+.sr-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 14px 0;
+}
+
+/* ── Resources links ── */
+.sr-resources {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+}
+.sr-resources a {
+    color: #1565c0;
+    text-decoration: none;
+    margin-right: 12px;
+}
+.sr-resources a:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+    .sr-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .sr-header img { height: 48px; }
+    .sr-toolbar { flex-direction: column; align-items: flex-start; }
+    .sr-mode-tab { font-size: 0.82rem; padding: 5px 11px; }
+}
